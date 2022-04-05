@@ -54,12 +54,14 @@
 
 .main__content__table {
   width: 800px;
+  max-height: 500px;
   margin: 30px auto;
   padding: 20px 30px;
   box-shadow: 4px 0px 10px rgba(93, 109, 151, 0.419);
   border-collapse: collapse;
   border-radius: 10px;
   color: #5D6D97;
+  overflow: auto;
 }
 
 .main__content__table table {

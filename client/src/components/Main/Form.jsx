@@ -38,7 +38,7 @@ const Form = () => {
       type="date"
       onChange={(e) => handleInputVisit(e)}
     />
-    <button onClick={handleCreateDate}>add new date</button>
+    <button onClick={handleCreateDate}>Save</button>
   </div>
 
   );
