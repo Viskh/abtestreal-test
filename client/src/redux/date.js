@@ -31,7 +31,7 @@ export const getDate = () => {
   return async (dispatch) => {
     dispatch({ type: "date/load/pending" });
     try {
-      const res = await fetch("http://localhost:4000/dates");
+      const res = await fetch("/dates");
       const data = await res.json();
 
       dispatch({ type: "date/load/fulfilled", payload: data });
@@ -45,7 +45,7 @@ export const postDate = (dateReg, dateVisit) => {
   return async (dispatch) => {
     dispatch({ type: "date/create/pending" });
     try {
-      const res = await fetch("http://localhost:4000/add/dates", {
+      const res = await fetch("/add/date", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -65,7 +65,7 @@ export const deleteDate = (id) => {
   return async (dispatch) => {
     dispatch({ type: "date/delete/pending" });
     try {
-      await fetch(`http://localhost:4000/delete/date/${id}`, {
+      await fetch(`/delete/date/${id}`, {
         method: "DELETE",
       });
       dispatch({ type: "date/delete/fulfilled", payload: id });
